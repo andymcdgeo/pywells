@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pywells
+Version: 0.0.1
+Summary: Package for working with well log data.
+Home-page: https://github.com/andymcdgeo/pywells
+Author: Andy McDonald
+Author-email: 
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
