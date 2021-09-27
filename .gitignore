@@ -1,3 +1,4 @@
 .ipynb_checkpoints
+pywells.egg-info
 .pytest_cache
 *.pyc
