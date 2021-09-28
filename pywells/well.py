@@ -25,6 +25,10 @@ class Well:
         for item in las_file.well:
             self.header[item.mnemonic] = {'description':item.descr, 'value':item.value}
 
+        self.curve_info = {}
+        for item in las_file.curves:
+            self.curve_info[item.mnemonic] = {'description':item.descr, 'units':item.unit}
+
         return las_file
 
     def header_table(self):
@@ -36,6 +40,12 @@ class Well:
         return header_df
         
 
-    def curve_info(self):
+    def curve_table(self):
         #Create dataframe of curve info
+        curve_df = pd.DataFrame.from_dict(self.curve_info, orient='index')
+        curve_df.reset_index(inplace=True)
+        curve_df.rename(columns={'index':'mnemonic'}, inplace=True)
+        return curve_df
+    
+    def param_table(self):
         pass
