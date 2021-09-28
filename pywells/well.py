@@ -19,6 +19,7 @@ class Well:
 
         # Convert the data to a pandas dataframe
         self.well_data = las_file.df()
+        self.well_data.reset_index(inplace=True)
 
         # Create a simple dictionary of mnemonics & values
         self.header = {}
