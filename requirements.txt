@@ -1,0 +1,4 @@
+lasio
+dlisio
+pandas
+numpy
