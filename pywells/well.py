@@ -15,6 +15,9 @@ class Well:
 
     def __str__(self) -> str:
         return f'pywells Well Object - UWI: {self.uwi}, Well Name: {self.wellname}'
+
+    def __repr__(self) -> str:
+        return f'Well(UWI={self.uwi}, Well Name={self.wellname})'
         
     def load_from_las(self, fname):
         las_file = lasio.read(fname)
@@ -44,6 +47,16 @@ class Well:
     @classmethod
     def load_from_dlis(cls, fname):
         pass
+
+    def describe(self):
+        curve_mnemonics = self.curve_names()
+
+        print(f'Well Name:\t {self.wellname}')
+        print(f'Well UWI:\t {self.uwi}')
+        print(f'Field Name: \t {self.FLD}')
+        print(f'Latitude: \t {self.LAT}')
+        print(f'Longitude:\t {self.LON}')
+        print(f'Curves: \t '.join(curve_mnemonics))
 
     def header_table(self):
         """
