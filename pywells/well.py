@@ -56,7 +56,10 @@ class Well:
         print(f'Field Name: \t {self.FLD}')
         print(f'Latitude: \t {self.LAT}')
         print(f'Longitude:\t {self.LON}')
-        print(f'Curves: \t '.join(curve_mnemonics))
+        print(f'No. of Curves:{len(curve_mnemonics)}')
+        print('Curve Mnemonics:')
+        print(", ".join(curve_mnemonics))        
+        
 
     def header_table(self):
         """
